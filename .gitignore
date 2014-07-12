@@ -1,1 +1,3 @@
 Sources/
+*.nupkg
+NupenGL.nuspec
