@@ -7,7 +7,7 @@ nuget{
         owners: {Various Open Source Projects};
         licenseUrl: "https://raw.githubusercontent.com/jcdickinson/NupenGL/master/license.txt";
         projectUrl: "https://github.com/jcdickinson/NupenGL";
-        iconUrl: "todo";
+        iconUrl: "https://cdn.rawgit.com/jcdickinson/NupenGL/356c51d05d35426057b8465cd89e6b39f78361a1/icon.png";
         requireLicenseAcceptance:false;
         summary:NupenGL allows you to access OpenGL from your application.;
 
