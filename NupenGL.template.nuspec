@@ -16,7 +16,7 @@ nuget{
 		architectures. Includes FreeGLUT, GLFW and GLEW.";
 
         releaseNotes: "Initial Release.";
-        copyright: Copyright 2014S;
+        copyright: Copyright 2014;
         tags: { Game, OpenGL, GLUT, FreeGLUT, GLFW, GLEW };
     };
 
