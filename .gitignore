@@ -1,3 +1,2 @@
-Sources/
+# Ignore the built nugget packages
 *.nupkg
-NupenGL.nuspec
