@@ -1,1 +1,0 @@
-http://coapp.org/tutorials/building-a-package.html

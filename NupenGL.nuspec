@@ -1,9 +1,9 @@
 nuget{
     nuspec {
         id = nupengl.core;
-        version : 0.0.0.1;
+        version : 0.1.0.0;
         title: NupenGL Core;
-        authors: {Jonathan Dickinson};
+        authors: {Jonathan Dickinson, Ali Badereddin};
         owners: {Various Open Source Projects};
         licenseUrl: "https://cdn.rawgit.com/jcdickinson/NupenGL/master/License.txt";
         projectUrl: "https://github.com/jcdickinson/NupenGL";
@@ -24,19 +24,21 @@ nuget{
 
         #defines {
 			SOURCES = Sources\;
+            OPENGL = Sources\opengl\;
             FREEGLUT = Sources\freeglut\;
 			GLEW = Sources\glew\;
-			GLFW = Sources\glfw-WIN64\;
-			GLFW86 = Sources\glfw-WIN32\lib-msvc120\;
-			GLFW64 = Sources\glfw-WIN64\lib-msvc120\;
+			GLFW = Sources\glfw\;
         };
 
 		include: { 
-			"${SOURCES}include\**\*"
+			"${FREEGLUT}include\**\*",
+			"${GLFW}include\**\*",
+			"${GLEW}include\**\*"
 		};
 
 		lib: {
-			"opengl32.lib"
+			"${OPENGL}lib\opengl32.lib",
+			"${OPENGL}lib\glu32.lib"
 		};
 
 		docs: {
@@ -45,35 +47,35 @@ nuget{
 
 		// ** x64 **
 
-		[x64,v120] {
+		[x64] {
 			bin: {
 				"${FREEGLUT}bin\x64\freeglut.dll",
-				"${GLFW64}glfw3.dll",
-				"${GLEW}bin\Release\x64\glew32.dll",
-				"${GLEW}bin\Release\x64\glewinfo.exe",
-				"${GLEW}bin\Release\x64\visualinfo.exe"
+				"${GLFW}bin\x64\glfw3.dll",
+				"${GLEW}bin\x64\glew32.dll",
+				"${GLEW}bin\x64\glewinfo.exe",
+				"${GLEW}bin\x64\visualinfo.exe"
 			};
 			lib: {
 				"${FREEGLUT}lib\x64\freeglut.lib",
-				"${GLFW64}glfw3dll.lib",
-				"${GLEW}lib\Release\x64\glew32.lib"
+				"${GLFW}lib\x64\glfw3dll.lib",
+				"${GLEW}lib\x64\glew32.lib"
 			};
 		};
 
 		// ** x86 **
 
-		[x86,v120] {
+		[x86] {
 			bin: {
 				"${FREEGLUT}bin\freeglut.dll",
-				"${GLFW86}glfw3.dll",
-				"${GLEW}bin\Release\Win32\glew32.dll",
-				"${GLEW}bin\Release\Win32\glewinfo.exe",
-				"${GLEW}bin\Release\Win32\visualinfo.exe"
+				"${GLFW}bin\glfw3.dll",
+				"${GLEW}bin\glew32.dll",
+				"${GLEW}bin\glewinfo.exe",
+				"${GLEW}bin\visualinfo.exe"
 			};
 			lib: {
 				"${FREEGLUT}lib\freeglut.lib",
-				"${GLFW86}glfw3dll.lib",
-				"${GLEW}lib\Release\Win32\glew32.lib"
+				"${GLFW}lib\glfw3dll.lib",
+				"${GLEW}lib\glew32.lib"
 			};
 		};
     }
