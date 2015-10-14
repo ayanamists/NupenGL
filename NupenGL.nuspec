@@ -1,7 +1,7 @@
 nuget{
     nuspec {
         id = nupengl.core;
-        version : 0.1.0.0;
+        version : 0.1.0.1;
         title: NupenGL Core;
         authors: {Jonathan Dickinson, Ali Badereddin};
         owners: {Various Open Source Projects};
@@ -24,7 +24,6 @@ nuget{
 
         #defines {
 			SOURCES = Sources\;
-            OPENGL = Sources\opengl\;
             FREEGLUT = Sources\freeglut\;
 			GLEW = Sources\glew\;
 			GLFW = Sources\glfw\;
@@ -42,8 +41,7 @@ nuget{
         };
 
 		lib: {
-			"${OPENGL}lib\opengl32.lib",
-			"${OPENGL}lib\glu32.lib"
+			"opengl32.lib"
 		};
 
 		docs: {
