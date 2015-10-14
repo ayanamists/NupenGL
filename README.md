@@ -28,6 +28,12 @@ If you're considering updating the Nuget package, here are step-by-step instruct
 * Make your changes, cd to the NupenGL folder and run: Write-NuGetPackage '.\NupenGL.nuspec'
 * Test your Nuget package [locally](http://docs.nuget.org/create/hosting-your-own-nuget-feeds)
 
+## Compatibility
+
+This package has been tested on Visual Studio 2013 and 2015, with x86 and x64. 
+
+If you hit any issues or find this package compatible with other versions of VS, please let us know.
+
 ## Contact Us
 
 This package was originally created by [Jonathan Dickinson](https://github.com/jcdickinson) and later updated by [Ali Badereddin](https://github.com/alibad). Feel free to contact any of us if you have any questions or would like to contribute.
