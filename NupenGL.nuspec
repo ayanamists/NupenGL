@@ -1,7 +1,7 @@
 nuget{
     nuspec {
         id = nupengl.core;
-        version : 0.1.0.0;
+        version : 0.1.0.1;
         title: NupenGL Core;
         authors: {Jonathan Dickinson, Ali Badereddin};
         owners: {Various Open Source Projects};
