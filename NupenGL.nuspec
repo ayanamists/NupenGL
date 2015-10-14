@@ -30,11 +30,16 @@ nuget{
 			GLFW = Sources\glfw\;
         };
 
-		include: { 
+		nestedGLInclude: {
+            #destination = ${d_include}\GL;
 			"${FREEGLUT}include\**\*",
-			"${GLFW}include\**\*",
 			"${GLEW}include\**\*"
-		};
+        };
+		
+		nestedGLFWInclude: {
+            #destination = ${d_include}\GLFW;
+			"${GLFW}include\**\*"
+        };
 
 		lib: {
 			"${OPENGL}lib\opengl32.lib",
