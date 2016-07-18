@@ -14,6 +14,8 @@ Just install the NupenGL.Core Nuget package, which will also auto-install its de
 * NupenGL.Core contains header and lib files.
 * NupenGL.Redist contains DLLs.
 
+Remember to `#include <GL/freeglut.h>` after your GLEW include.
+
 No more worrying about searching the web for the appropriate lib, header and DLL files.
 
 For more details, check this blog post: [NupenGL in Visual C++ 2015](http://mycodelog.com/2015/10/08/opengl-freeglut-in-visual-studio-2015/)
